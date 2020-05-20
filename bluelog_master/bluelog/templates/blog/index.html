@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/pagination.html' import render_pagination %} {# render_pager也可以 #}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1 class="display-3"><img src="{{ url_for('static', filename='aobama.jpg') }}" width="70">{{ admin.blog_title|default('Blog Title') }}</h1>
+        <h4 class="text-muted">&nbsp;{{ admin.blog_sub_title|default('Blog Subtitle') }}</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            {% include 'blog/_posts.html' %}
+            {% if posts %}
+                <div class="page-footer">{{ render_pagination(pagination) }}</div>  {# render_pager(pagination)也可以 #}
+            {% endif %}
+        </div>
+        <p class="float-right">
+            <small>
+                <a href="{{ url_for('blog.delete_cache') }}">Delete Cache</a> {# 清除缓存 #}
+            </small>
+        </p>
+        <div class="col-sm-4 sidebar">
+            {% include 'blog/_sidebar.html' %}
+        </div>
+    </div>
+{% endblock %}
