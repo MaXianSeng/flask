@@ -1,4 +1,4 @@
-FLASK_APP=D:\programme\Python_Programme\flask\second_part\bluelog_master\bluelog
+FLASK_APP=bluelog
 
 FLASK_ENV=development
 
