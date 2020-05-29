@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, current_app, request, flash, redir
 from bluelog.models import Category, Post, Comment
 from flask_login import current_user
 from bluelog.forms import CommentForm
-from bluelog.extensions import db, cache
+from bluelog.extensions import db# cache
 from bluelog.utils import redirect_back
 from bluelog.emails import send_comment_mail
 
