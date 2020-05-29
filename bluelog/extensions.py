@@ -6,9 +6,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_moment import Moment
 from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
-from flask_debugtoolbar import DebugToolbarExtension
+#from flask_debugtoolbar import DebugToolbarExtension
 from flask_caching import Cache  #缓存
-from flask_migrate import Migrate  #迁移工具
+#from flask_migrate import Migrate  #迁移工具
 
 bootstrap = Bootstrap()
 ckeditor = CKEditor()
@@ -17,9 +17,9 @@ db = SQLAlchemy()
 moment = Moment()
 login_manager = LoginManager()
 csrf = CSRFProtect()
-toolbar = DebugToolbarExtension() #使用扩展Flask-DebugToolbar调试程序
+#toolbar = DebugToolbarExtension() #使用扩展Flask-DebugToolbar调试程序
 cache = Cache()
-migrate = Migrate()
+#migrate = Migrate()
 
 @login_manager.user_loader
 def load_user(user_id):
