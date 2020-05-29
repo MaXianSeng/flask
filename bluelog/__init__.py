@@ -3,7 +3,7 @@ from bluelog.settings import config
 from bluelog.blueprints.auth import auth_bp
 from bluelog.blueprints.blog import blog_bp
 from bluelog.blueprints.admin import admin_bp
-from bluelog.extensions import bootstrap, db, moment, ckeditor, mail, login_manager, csrf, cache#, toolbar, migrate
+from bluelog.extensions import bootstrap, db, moment, ckeditor, mail, login_manager, csrf#, cache, toolbar, migrate
 import os
 import click
 from flask_sqlalchemy import get_debug_queries
@@ -37,7 +37,7 @@ def register_extensions(app):
     login_manager.init_app(app)
     csrf.init_app(app)
     #toolbar.init_app(app) #调试调程序工具
-    cache.init_app(app) #缓存
+    #cache.init_app(app) #缓存
     #migrate.init_app(app, db) #迁移工具
 
 def register_logging(app):  #程序日志

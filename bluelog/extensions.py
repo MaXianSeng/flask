@@ -7,7 +7,7 @@ from flask_moment import Moment
 from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
 #from flask_debugtoolbar import DebugToolbarExtension
-from flask_caching import Cache  #缓存
+#from flask_caching import Cache  #缓存
 #from flask_migrate import Migrate  #迁移工具
 
 bootstrap = Bootstrap()
@@ -18,7 +18,7 @@ moment = Moment()
 login_manager = LoginManager()
 csrf = CSRFProtect()
 #toolbar = DebugToolbarExtension() #使用扩展Flask-DebugToolbar调试程序
-cache = Cache()
+#cache = Cache()
 #migrate = Migrate()
 
 @login_manager.user_loader

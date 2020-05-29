@@ -9,7 +9,7 @@ from bluelog.emails import send_comment_mail
 blog_bp = Blueprint('blog', __name__)#创建蓝本
 
 @blog_bp.route('/')
-@cache.cached(timeout=10 * 60)  #缓存
+#@cache.cached(timeout=10 * 60)  #缓存
 def index():
     page = request.args.get('page', 1, type=int) #当前请求第几页，默认为第一页
     per_page = current_app.config['BLUELOG_POST_PER_PAGE'] #每一页有几篇记录,在settings.py中
@@ -17,11 +17,11 @@ def index():
     posts = pagination.items #当前页面的纪录列表
     return render_template('blog/index.html', pagination=pagination, posts=posts)
 
-@blog_bp.route('/delete-cache') #删除缓存
-def delete_cache():
-    cache.delete('view/%s' % url_for('blog.index'))
+#@blog_bp.route('/delete-cache') #删除缓存
+#def delete_cache():
+#    cache.delete('view/%s' % url_for('blog.index'))
     #flash('Cached data for index have been deleted.', 'info')
-    return redirect(url_for('blog.index'))
+#    return redirect(url_for('blog.index'))
 
 @blog_bp.route('/about')
 def about():
