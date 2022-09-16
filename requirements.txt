@@ -24,7 +24,7 @@ itsdangerous==1.1.0
 jinja2==2.10.3
 jsmin==2.2.2
 lazy-object-proxy==1.4.3
-mako==1.1.0
+mako==1.2.2
 markupSafe==1.1.1
 mccabe==0.6.1
 pip==19.3.1
