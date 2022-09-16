@@ -18,7 +18,7 @@ flask-wtf==0.14.2
 gunicorn==19.9.0
 itsdangerous==0.24
 jinja2==2.11.2
-mako==1.0.7
+mako==1.2.2
 markupsafe==1.1.1
 mccabe==0.6.1
 pathtools==0.1.2
